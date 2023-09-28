@@ -23,7 +23,7 @@ export class DetalheService {
     return this.http.get(url, this.options).pipe(
       map((obj: any) => {
         console.log(obj);
-          return this.mapearFilme(obj);
+        return this.mapearFilme(obj);
       })
     );
   }
@@ -33,6 +33,9 @@ export class DetalheService {
       obj.id,
       obj.title,
       obj.poster_path,
+      obj.overview,
+      obj.vote_count,
+      obj.video,
       obj.genres.map((genero: any) => genero.name)
     );
   }

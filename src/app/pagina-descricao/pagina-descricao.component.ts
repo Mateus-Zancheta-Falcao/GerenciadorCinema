@@ -9,7 +9,7 @@ import { DetalheService } from 'src/services/detalhes.service';
   styleUrls: ['./pagina-descricao.component.css'],
 })
 export class PaginaDescricaoComponent {
-  filmeDetalhes: Detalhes = new Detalhes("","","",[]);
+  filmeDetalhes: Detalhes = new Detalhes("","","","","","",[]);
 
   constructor(
     private filmeDetalhesService: DetalheService,
@@ -18,7 +18,6 @@ export class PaginaDescricaoComponent {
     const id = parseInt(this.route.snapshot.paramMap.get('id')!);
 
     this.filmeDetalhesService.obterFilmeDetalhes(id).subscribe((listFilme) => {
-      console.log(listFilme);
       this.filmeDetalhes = listFilme;
     });
   }

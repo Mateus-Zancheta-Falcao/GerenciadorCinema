@@ -1,59 +1,71 @@
 {
   "adult": false,
-  "backdrop_path": "/cXQH2u7wUIX1eoIdEj51kHXoWhX.jpg",
+  "backdrop_path": "/xxiPjhXigJ4zPiqqrA77FK10ULo.jpg",
   "belongs_to_collection": null,
-  "budget": 1350000,
+  "budget": 27000000,
   "genres": [
+    {
+      "id": 18,
+      "name": "Drama"
+    },
     {
       "id": 35,
       "name": "Comédia"
     },
     {
-      "id": 80,
-      "name": "Crime"
+      "id": 10749,
+      "name": "Romance"
     }
   ],
   "homepage": "",
-  "id": 100,
-  "imdb_id": "tt0120735",
+  "id": 245,
+  "imdb_id": "tt0276751",
   "original_language": "en",
-  "original_title": "Lock, Stock and Two Smoking Barrels",
-  "overview": "Eddy convence três amigos a ajudá-lo com dinheiro para uma aposta muito alta de pôquer contra o chefão do crime local, Hatchet Harry. Harry trapaceia, e Eddy perde. Harry, então, dá um prazo a ele de uma semana para pagar 500 mil libras ou entregar o bar de seu pai. Desesperado, Eddy e seus amigos começam a roubar e vivem em constante perigo.",
-  "popularity": 11.092,
-  "poster_path": "/4qu5iaezyfO0aaoJZIX54nYLEcN.jpg",
+  "original_title": "About a Boy",
+  "overview": "Will Freeman (Hugh Grant) é um homem na faixa dos trinta anos metido a galã que inventa ter um filho apenas para poder ir às reuniões de pais solteiros, onde tem a oportunidade de conhecer mães também solteiras. Will sempre segue a mesma tática: vive com elas um rápido romance e quando elas começam a falar em compromisso ele acaba o namoro. Até que, em um de seus relacionamentos, Will conhece o jovem Marcus (Nicholas Hoult), um garoto de 12 anos que é completamente o seu oposto e tem muitos problemas em casa e na escola. Com o tempo Will e Marcus se envolvem cada vez mais, aprendendo que um pode ensinar muito ao outro.",
+  "popularity": 16.451,
+  "poster_path": "/38idKGSXqTUUMy0gqbUfmNOBhwh.jpg",
   "production_companies": [
     {
-      "id": 491,
-      "logo_path": "/5LvDUt3KmvRnXQ4NrdWJYHeuA8J.png",
-      "name": "Summit Entertainment",
+      "id": 33,
+      "logo_path": "/8lvHyhjr8oUKOOy2dKXoALWKdp0.png",
+      "name": "Universal Pictures",
       "origin_country": "US"
     },
     {
-      "id": 21920,
-      "logo_path": null,
-      "name": "The Steve Tisch Company",
-      "origin_country": ""
+      "id": 694,
+      "logo_path": "/5LEHONGkZBIoWvp1ygHOF8iyi1M.png",
+      "name": "StudioCanal",
+      "origin_country": "FR"
     },
     {
-      "id": 13419,
-      "logo_path": null,
-      "name": "SKA Films",
+      "id": 10163,
+      "logo_path": "/16KWBMmfPX0aJzDExDrPxSLj0Pg.png",
+      "name": "Working Title Films",
       "origin_country": "GB"
     },
     {
-      "id": 1382,
-      "logo_path": "/sOg7LGESPH5vCTOIdbMhLuypoLL.png",
-      "name": "PolyGram Filmed Entertainment",
+      "id": 11391,
+      "logo_path": "/t6m0uRTzaFHCsvEpikENE0PWJGb.png",
+      "name": "Tribeca Productions",
       "origin_country": "US"
     },
     {
-      "id": 20076,
-      "logo_path": "/i9qXGJIP9fGN22PP5jXUVENbyHi.png",
-      "name": "HandMade Films",
-      "origin_country": "GB"
+      "id": 7385,
+      "logo_path": null,
+      "name": "Kalima Productions",
+      "origin_country": "DE"
     }
   ],
   "production_countries": [
+    {
+      "iso_3166_1": "FR",
+      "name": "France"
+    },
+    {
+      "iso_3166_1": "DE",
+      "name": "Germany"
+    },
     {
       "iso_3166_1": "GB",
       "name": "United Kingdom"
@@ -63,9 +75,9 @@
       "name": "United States of America"
     }
   ],
-  "release_date": "1998-08-28",
-  "revenue": 28356188,
-  "runtime": 105,
+  "release_date": "2002-04-26",
+  "revenue": 129000000,
+  "runtime": 101,
   "spoken_languages": [
     {
       "english_name": "English",
@@ -74,9 +86,9 @@
     }
   ],
   "status": "Released",
-  "tagline": "Eles são uma desgraça para criminosos em todo lugar.",
-  "title": "Jogos, Trapaças e Dois Canos Fumegantes",
+  "tagline": "",
+  "title": "Um Grande Garoto",
   "video": false,
-  "vote_average": 8.126,
-  "vote_count": 6070
+  "vote_average": 6.654,
+  "vote_count": 2054
 }

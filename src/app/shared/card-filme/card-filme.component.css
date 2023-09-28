@@ -7,3 +7,7 @@
   transform: scale(1.01);
   box-shadow: 0 0 0.2rem #ffffff6d;
 }
+
+h5 {
+  color: gray;
+}
