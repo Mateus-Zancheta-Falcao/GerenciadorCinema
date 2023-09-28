@@ -1,0 +1,14 @@
+  <div class="card h-100 border-0 bg-transparent">
+    <a class="text-decoration-none text-reset" [routerLink]="'/pagina-descricao/' + filme.id">
+      <img
+        class="card-img-top img-fluid poster-image"
+        [ngSrc]="'https://image.tmdb.org/t/p/original' + filme.poster"
+        width="553"
+        height="830"
+        [alt]=""
+      />
+      <div class="card-body">
+        <h5 class="card-title text-center">{{ filme.titulo }}</h5>
+      </div>
+    </a>
+</div>

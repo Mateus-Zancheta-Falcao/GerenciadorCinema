@@ -1,0 +1,27 @@
+<section class="container">
+  <h1 class="mb-5">Em alta</h1>
+
+  <div class="row">
+    <div
+      *ngFor="let filme of listaFilmes"
+      class="col-xl-2 col-lg-3 col-md-4 col-sm-6 mb-4"
+    >
+      <app-card-filme [filme]="filme"></app-card-filme>
+    </div>
+  </div>
+
+  <h1 class="text-black mb-5">Os filmes mais bem avaliados</h1>
+  
+  <div class="row">
+    <div
+      *ngFor="let filmeRecomendado of listaFilmesRecomendados"
+      class="col-xl-2 col-lg-3 col-md-4 col-sm-6 mb-4"
+    >
+      <app-card-filme [filme]="filmeRecomendado"></app-card-filme>
+    </div>
+  </div>
+
+  <footer>
+    <p>By Mateus Zancheta Falcão</p>
+  </footer>
+</section>

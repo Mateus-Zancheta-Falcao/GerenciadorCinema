@@ -1,0 +1,46 @@
+<div class="title">
+  <h1>{{ filmeDetalhes.title }}</h1>
+  <p>25.500 Votos</p>
+  <i class="fa-sharp fa-regular fa-heart"></i>
+</div>
+
+<section>
+  <div class="posters">
+    <div>
+      <img
+        class="card-img-top img-fluid poster-image"
+        [ngSrc]="'https://image.tmdb.org/t/p/original' + filmeDetalhes.poster"
+        width="653"
+        height="930"
+        [alt]=""
+      />
+    </div>
+    <iframe
+      src="https://www.youtube.com/embed/fC5MKJDW6sc"
+      title='GEAR5 (fifth) "This is my PEAK!" -ANIME DATE REVEALED TEASER REEL'
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allowfullscreen
+    ></iframe>
+  </div>
+
+  <div *ngFor="let generos of filmeDetalhes.generos">
+    <span class="badge bg-whi fs-6">{{ generos }}</span>
+  </div>
+
+  <div class="descricao">
+    <p>
+      Houve um homem que conquistou tudo aquilo que o mundo tinha a oferecer, o
+      lendário Rei dos Piratas, Gold Roger. Capturado e condenado à execução
+      pelo Governo Mundial, suas últimas palavras lançaram legiões aos mares.
+      "Meu tesouro? Se quiserem, podem pegá-lo. Procurem-no! Ele contém tudo que
+      este mundo pode oferecer!". Foi a revelação do maior tesouro, o One Piece,
+      cobiçado por homens de todo o mundo, sonhando com fama e riqueza
+      imensuráveis... Assim começou a Grande Era dos Piratas!
+    </p>
+  </div>
+</section>
+
+<footer>
+  <p>By Mateus Zancheta Falcão</p>
+</footer>
