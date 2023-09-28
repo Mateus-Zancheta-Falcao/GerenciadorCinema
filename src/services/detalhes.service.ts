@@ -20,17 +20,23 @@ export class DetalheService {
   public obterFilmeDetalhes(id: number): Observable<Detalhes> {
     const url = `https://api.themoviedb.org/3/movie/${id}?language=pt-BR`;
 
-    return this.http.get(url, this.options).pipe(
-      map((obj: any) => {
-        console.log(obj);
-        return this.mapearFilme(obj);
-      })
-    ).pipe(switchMap((obj: Detalhes) => {
-      return this.obterTrailerFilme(obj.id).pipe(map((obj2: string) => {
-        obj.video = 'https://www.youtube.com/embed/' + obj2;
-        return obj;
-      }));
-    }));
+    return this.http
+      .get(url, this.options)
+      .pipe(
+        map((obj: any) => {
+          return this.mapearFilme(obj);
+        })
+      )
+      .pipe(
+        switchMap((obj: Detalhes) => {
+          return this.obterTrailerFilme(obj.id).pipe(
+            map((obj2: string) => {
+              obj.video = 'https://www.youtube.com/embed/' + obj2;
+              return obj;
+            })
+          );
+        })
+      );
   }
 
   public obterTrailerFilme(id: string): Observable<string> {
@@ -48,14 +54,14 @@ export class DetalheService {
   }
 
   public mapearFilme(obj: any): Detalhes {
-    return (
-      obj.id,
-      obj.title,
-      obj.poster_path,
-      obj.overview,
-      obj.vote_count,
-      'https://www.youtube.com/embed/' + obj.key,
-      obj.genres.map((genero: any) => genero.name)
-    );
+    return {
+      id: obj.id,
+      title: obj.title,
+      poster: obj.poster_path,
+      overview: obj.overview,
+      vote_count: obj.vote_count,
+      video: 'https://www.youtube.com/embed/' + obj.key,
+      generos: obj.genres.map((genero: any) => genero.name),
+    };
   }
 }
