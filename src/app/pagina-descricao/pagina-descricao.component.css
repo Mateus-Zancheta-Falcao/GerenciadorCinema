@@ -31,6 +31,7 @@ iframe{
 
 .descricao {
     width: 1320px;
+    text-align: justify;
 }
 
 .generos {

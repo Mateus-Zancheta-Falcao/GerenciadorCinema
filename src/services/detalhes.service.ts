@@ -1,6 +1,6 @@
 import { environment } from 'src/environments/environment';
 import { HttpClient } from '@angular/common/http';
-import { Observable, map } from 'rxjs';
+import { Observable, map, switchMap } from 'rxjs';
 import { Detalhes } from 'src/models/detalhes';
 import { Injectable } from '@angular/core';
 
@@ -25,17 +25,36 @@ export class DetalheService {
         console.log(obj);
         return this.mapearFilme(obj);
       })
+    ).pipe(switchMap((obj: Detalhes) => {
+      return this.obterTrailerFilme(obj.id).pipe(map((obj2: string) => {
+        obj.video = 'https://www.youtube.com/embed/' + obj2;
+        return obj;
+      }));
+    }));
+  }
+
+  public obterTrailerFilme(id: string): Observable<string> {
+    const url = `https://api.themoviedb.org/3/movie/${id}/videos?language=pt-BR`;
+
+    return this.http.get(url, this.options).pipe(
+      map((obj: any) => {
+        return this.mapearVideo(obj.results);
+      })
     );
   }
 
+  public mapearVideo(obj: any[]): string {
+    return obj[0].key;
+  }
+
   public mapearFilme(obj: any): Detalhes {
-    return new Detalhes(
+    return (
       obj.id,
       obj.title,
       obj.poster_path,
       obj.overview,
       obj.vote_count,
-      obj.video,
+      'https://www.youtube.com/embed/' + obj.key,
       obj.genres.map((genero: any) => genero.name)
     );
   }
